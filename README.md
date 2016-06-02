@@ -12,7 +12,8 @@ npm install fetch-as-audio-buffer
 
 downloads:
 
-- [fetch-as-audio-buffer.js](https://raw.githubusercontent.com/mohayonao/fetch-as-audio-buffer/master/index.js)
+- [fetch-as-audio-buffer.js](https://raw.githubusercontent.com/mohayonao/fetch-as-audio-buffer/master/build/fetch-as-audio-buffer.js)
+- [fetch-as-audio-buffer.min.js](https://raw.githubusercontent.com/mohayonao/fetch-as-audio-buffer/master/build/fetch-as-audio-buffer.min.js)
 
 ## API
 - `fetchAsAudioBuffer(audioContext, url): any`
