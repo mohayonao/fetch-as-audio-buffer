@@ -6,6 +6,10 @@
   "bugs": {
     "url": "https://github.com/mohayonao/fetch-as-audio-buffer/issues"
   },
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "uglify-js": "^2.6.2"
+  },
   "files": [
     "index.js",
     "package.json",
@@ -24,6 +28,11 @@
     "url": "http://github.com/mohayonao/fetch-as-audio-buffer.git"
   },
   "scripts": {
-    "postversion": "git push && git push --tags"
+    "build": "npm run build-browser && npm run build-minify",
+    "build-browser": "browserify index.js --standalone fetchAsAudioBuffer -o build/fetch-as-audio-buffer.js",
+    "build-minify": "uglifyjs build/fetch-as-audio-buffer.js -o build/fetch-as-audio-buffer.min.js",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm run build",
+    "version": "npm run build && git add -A build"
   }
 }
